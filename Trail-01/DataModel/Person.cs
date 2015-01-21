@@ -10,7 +10,8 @@ namespace DataModel
 
     // this is the first naive attempt
     // with a Person class and some typical
-    // personal attributes 
+    // personal attributes as public accessible fields 
+    // (fields are variables defined in a class)
 
     public class Person
     {
@@ -23,14 +24,14 @@ namespace DataModel
         // height of person
         public int Height;
 
+        // true=M, false=F
+        public bool IsMale;
+
         // magic #,
         // 0=black
         // 1=yellow
         // 2=red
         // 3=white
         public int HairColor;
-
-        // true=M, false=F
-        public bool IsMale;
     }
 }

@@ -17,17 +17,15 @@ namespace ConsumerApp
             Person pan = new Person();
             pan.Name = "Pan";
             pan.Age = 25;
-            pan.HairColor = 0;
+            // color is hard to use, can never remember what is what
+            pan.HairColor = 0; // black
             pan.Height = 6;
             pan.IsMale = true;
 
             Person friend = new Person();
             friend.Name = "Melissa";
-
-            friend.Age = -20; // evil code passes invalid age number, how to prevent?
-            //friend.SetAge(-20); // attempt 1
-
-            friend.HairColor = 1;
+            friend.Age = 20; 
+            friend.HairColor = 1; // yellow
             friend.Height = 6;
 
 
@@ -69,7 +67,6 @@ namespace ConsumerApp
         public int AddAges(Person person1, Person person2)
         {
             return person1.Age + person2.Age;
-            //return person1.GetAge() + person2.GetAge(); // attempt 1
         }
 
         public int AverageAge(Person person1, Person person2)

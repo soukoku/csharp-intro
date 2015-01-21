@@ -17,12 +17,30 @@ namespace DataModel
         // name of person
         public string Name;
 
+        #region original age
+
         // age of person
         public int Age;
 
+        #endregion
 
+        #region prevention attempt 1 - hide field and use methods to control access
 
-        // mitigate bad age by controlled property setter!
+        //private int _age;
+        //public int GetAge()
+        //{
+        //    return _age;
+        //}
+        //public void SetAge(int age)
+        //{
+        //    if (age < 0) { throw new ArgumentOutOfRangeException(); }
+        //    _age = age;
+        //}
+
+        #endregion
+
+        #region prevention attempt 2 - use language property
+
         //private int _age;
 
         //public int Age
@@ -35,12 +53,15 @@ namespace DataModel
         //    }
         //}
 
-
+        #endregion
 
 
 
         // height of person
         public int Height;
+
+        // true=M, false=F
+        public bool IsMale;
 
         // magic #,
         // 0=black
@@ -48,8 +69,5 @@ namespace DataModel
         // 2=red
         // 3=white
         public int HairColor;
-
-        // true=M, false=F
-        public bool IsMale;
     }
 }
