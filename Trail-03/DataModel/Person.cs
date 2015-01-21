@@ -22,7 +22,6 @@ namespace DataModel
             set { _name = value; }
         }
 
-
         private int _age;
         public int Age
         {
@@ -57,13 +56,13 @@ namespace DataModel
         // 1=yellow
         // 2=red
         // 3=white
-        public int HairColor { get; set; }
+        //public int HairColor { get; set; }
 
         #endregion
 
         #region improved with enum property;
 
-        //public HairColor HairColor { get; set; }
+        public HairColor HairColor { get; set; }
 
         #endregion
 

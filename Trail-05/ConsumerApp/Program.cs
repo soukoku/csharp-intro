@@ -94,55 +94,16 @@ namespace ConsumerApp
 
 
     // original version
-    class ToolMethods
-    {
-        // write the name to the console
-        public void EchoName(LivingThing thing)
-        {
-            Console.WriteLine(thing.Name);
-        }
-        public void EchoName(Car car)
-        {
-            Console.WriteLine(car.Name);
-        }
-
-        public string GetGenderThirdPersonSubject(Person person)
-        {
-            if (person.IsMale)
-            {
-                return "He";
-            }
-            return "She";
-        }
-
-        public int AddAges(LivingThing person1, LivingThing person2)
-        {
-            return person1.Age + person2.Age;
-        }
-
-        public int AverageAge(LivingThing person1, LivingThing person2)
-        {
-            return AddAges(person1, person2) / 2;
-        }
-
-        public int AddAges(Car car1, Car car2)
-        {
-            return car1.Age + car2.Age;
-        }
-
-        public int AverageAge(Car car1, Car car2)
-        {
-            return AddAges(car1, car2) / 2;
-        }
-    }
-
-    // version that uses interface types if possible
     //class ToolMethods
     //{
     //    // write the name to the console
-    //    public void EchoName(IIdentifiable identifiable)
+    //    public void EchoName(LivingThing thing)
     //    {
-    //        Console.WriteLine(identifiable.Name);
+    //        Console.WriteLine(thing.Name);
+    //    }
+    //    public void EchoName(Car car)
+    //    {
+    //        Console.WriteLine(car.Name);
     //    }
 
     //    public string GetGenderThirdPersonSubject(Person person)
@@ -154,14 +115,63 @@ namespace ConsumerApp
     //        return "She";
     //    }
 
-    //    public int AddAges(IHaveAge ageable1, IHaveAge ageable2)
+    //    public int AddAges(LivingThing person1, LivingThing person2)
     //    {
-    //        return ageable1.Age + ageable2.Age;
+    //        return person1.Age + person2.Age;
     //    }
 
-    //    public int AverageAge(IHaveAge ageable1, IHaveAge ageable2)
+    //    public int AverageAge(LivingThing person1, LivingThing person2)
     //    {
-    //        return AddAges(ageable1, ageable2) / 2;
+    //        return AddAges(person1, person2) / 2;
+    //    }
+
+    //    public int AddAges(Car car1, Car car2)
+    //    {
+    //        return car1.Age + car2.Age;
+    //    }
+
+    //    public int AverageAge(Car car1, Car car2)
+    //    {
+    //        return AddAges(car1, car2) / 2;
     //    }
     //}
+
+    // version that uses interface types if possible
+    class ToolMethods
+    {
+        // write the name to the console
+        public void EchoName(IIdentifiable identifiable)
+        {
+            Console.WriteLine(identifiable.Name);
+        }
+
+        public string GetGenderThirdPersonSubject(Person person)
+        {
+            if (person.IsMale)
+            {
+                return "He";
+            }
+            return "She";
+        }
+
+        public int AddAges(IHaveAge ageable1, IHaveAge ageable2)
+        {
+            return ageable1.Age + ageable2.Age;
+        }
+
+        public int AverageAge(IHaveAge ageable1, IHaveAge ageable2)
+        {
+            return AddAges(ageable1, ageable2) / 2;
+        }
+
+        public int AddNumbers(IEnumerable<int> values)
+        {
+            int sum = 0;
+            foreach (var val in values)
+            {
+                sum += val;
+            }
+            return sum;
+        }
+    }
 }

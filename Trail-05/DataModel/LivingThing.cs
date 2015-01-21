@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataModel
 {
-    public class LivingThing
+    public class LivingThing : IIdentifiable, IHaveAge
     {
         public string Name { get; set; }
 

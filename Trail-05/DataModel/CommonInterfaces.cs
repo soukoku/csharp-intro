@@ -10,12 +10,19 @@ namespace DataModel
 
     public interface IIdentifiable
     {
+        // contract syntax, not defining actual property
         string Name { get; set; }
+    }
+
+    public interface ICanDoSomthing
+    {
+        void DoSomething();
     }
 
     // can even be named like English if that's your thing
     public interface IHaveAge
     {
-        int Age { get; } // note this contract doesn't specify set even if actual class can set.
+        int Age { get; } 
+        // note this contract doesn't specify set even if actual class can set.
     }
 }

@@ -20,7 +20,7 @@ namespace DataModel
         #region original age
 
         // age of person
-        public int Age;
+        //public int Age;
 
         #endregion
 
@@ -41,17 +41,17 @@ namespace DataModel
 
         #region prevention attempt 2 - use language property
 
-        //private int _age;
+        private int _age;
 
-        //public int Age
-        //{
-        //    get { return _age; }
-        //    set
-        //    {
-        //        if (value < 0) { throw new ArgumentOutOfRangeException(); }
-        //        _age = value;
-        //    }
-        //}
+        public int Age
+        {
+            get { return _age; }
+            set
+            {
+                if (value < 0) { throw new ArgumentOutOfRangeException(); }
+                _age = value;
+            }
+        }
 
         #endregion
 

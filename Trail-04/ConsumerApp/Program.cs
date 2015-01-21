@@ -55,11 +55,11 @@ namespace ConsumerApp
             p2.Height = 1;
 
             // use the plant object in various scenarios
-            //Console.WriteLine("We have 2 plants:");
-            //tool.EchoName(p1);
-            //tool.EchoName(p2);
+            Console.WriteLine("We have 2 plants:");
+            tool.EchoName(p1);
+            tool.EchoName(p2);
 
-            //Console.WriteLine("Their combined age is " + tool.AddAges(p1, p2) + ", average age is " + tool.AverageAge(p1, p2));
+            Console.WriteLine("Their combined age is " + tool.AddAges(p1, p2) + ", average age is " + tool.AverageAge(p1, p2));
 
             #endregion
 
@@ -68,18 +68,14 @@ namespace ConsumerApp
         }
     }
 
-    // utility class containing various work methods 
+    // version that uses base types if possible
     class ToolMethods
     {
         // write the name to the console
-        public void EchoName(Person person)
+        public void EchoName(LivingThing thing)
         {
-            Console.WriteLine(person.Name);
+            Console.WriteLine(thing.Name);
         }
-        //public void EchoName(Plant plant)
-        //{
-        //    Console.WriteLine(plant.Name);
-        //}
 
         public string GetGenderThirdPersonSubject(Person person)
         {
@@ -90,53 +86,14 @@ namespace ConsumerApp
             return "She";
         }
 
-        public int AddAges(Person person1, Person person2)
+        public int AddAges(LivingThing person1, LivingThing person2)
         {
             return person1.Age + person2.Age;
         }
 
-        public int AverageAge(Person person1, Person person2)
+        public int AverageAge(LivingThing person1, LivingThing person2)
         {
             return AddAges(person1, person2) / 2;
         }
-
-        //public int AddAges(Plant p1, Plant p2)
-        //{
-        //    return p1.Age + p2.Age;
-        //}
-
-        //public int AverageAge(Plant p1, Plant p2)
-        //{
-        //    return AddAges(p1, p2) / 2;
-        //}
     }
-
-    // version that uses base types if possible
-    //class ToolMethods2
-    //{
-    //    // write the name to the console
-    //    public void EchoName(LivingThing thing)
-    //    {
-    //        Console.WriteLine(thing.Name);
-    //    }
-
-    //    public string GetGenderThirdPersonSubject(Person person)
-    //    {
-    //        if (person.IsMale)
-    //        {
-    //            return "He";
-    //        }
-    //        return "She";
-    //    }
-
-    //    public int AddAges(LivingThing person1, LivingThing person2)
-    //    {
-    //        return person1.Age + person2.Age;
-    //    }
-
-    //    public int AverageAge(LivingThing person1, LivingThing person2)
-    //    {
-    //        return AddAges(person1, person2) / 2;
-    //    }
-    //}
 }

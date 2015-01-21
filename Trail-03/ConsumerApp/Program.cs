@@ -18,14 +18,14 @@ namespace ConsumerApp
             pan.Name = "Pan";
             pan.Age = 25;
             // color is hard to use, can never remember what is what
-            pan.HairColor = 0; // black
+            pan.HairColor = HairColor.Black;// 0; // black
             pan.Height = 6;
             pan.IsMale = true;
 
             Person friend = new Person();
             friend.Name = "Melissa";
-            friend.Age = 20; 
-            friend.HairColor = 1; // yellow
+            friend.Age = 20;
+            friend.HairColor = HairColor.Yellow;// 1; // yellow
             friend.Height = 6;
 
 
