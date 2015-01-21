@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3086AB49-C805-44ED-8C28-7B4CFDA82F6B}</ProjectGuid>
+    <ProjectGuid>{B6D55F29-7B8A-4C16-B4D2-04C6C4B004B6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConsumerApp</RootNamespace>
@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataModel\DataModel.csproj">
-      <Project>{F18AB02D-A910-402C-B27D-E6BD12D09876}</Project>
+      <Project>{2A82FD55-158B-46FD-8074-7D85308B339A}</Project>
       <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>

@@ -14,14 +14,7 @@ namespace DataModel
 
     public class Person
     {
-        // name of person
-        private string _name;
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
+        public string Name { get; set; }
 
         private int _age;
         public int Age
@@ -46,26 +39,9 @@ namespace DataModel
         }
 
 
-        // note that properties without validation requirement
-        // can use shorthand syntax
         public bool IsMale { get; set; } // true=M, false=F
 
-        #region original
-
-        // magic #,
-        // 0=black
-        // 1=yellow
-        // 2=red
-        // 3=white
-        public int HairColor { get; set; }
-
-        #endregion
-
-        #region improved with enum property;
-
-        //public HairColor HairColor { get; set; }
-
-        #endregion
+        public HairColor HairColor { get; set; }
 
 
     }

@@ -11,7 +11,7 @@ namespace ConsumerApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("[Trail-02]");
+            Console.WriteLine("[Trail-03]");
 
             // establish some person objects
             Person pan = new Person();
